@@ -15,7 +15,9 @@ public class MainPanel : MonoBehaviour
 	public AudioSource fxSource;
 	public AudioClip clickSound;
 	public float lastVolumen;
+
 	[Header("Panels")]
+	public GameObject homePanel;
 	public GameObject mainPanel;
 	public GameObject optionsPanel;
 	public GameObject moduloSelectPanel;
@@ -45,8 +47,9 @@ public class MainPanel : MonoBehaviour
 		}
 	}
 
-	public void OpenePanel(GameObject panel) {
+	public void OpenPanel(GameObject panel) {
 
+		homePanel.SetActive(false);
 		mainPanel.SetActive(false);
 		optionsPanel.SetActive(false);
 		moduloSelectPanel.SetActive(false);
