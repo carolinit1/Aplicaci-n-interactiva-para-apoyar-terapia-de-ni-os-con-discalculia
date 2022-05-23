@@ -8,21 +8,19 @@ using System.Text;
 public class Dado : MonoBehaviour
 
 {
-	public Text texto;
-	public Cara[] caras;
-	public int numeroActual;
-	public string puntosC;
-	public int mensajeGesto;
-	public bool val;
+	public Text texto; //variable el cual mostrará las respuestas del sistema al usuario
+	public Cara[] caras; //arreglo que almacena las caras del dado
+	public int numeroActual; //numero de la cara en el que cayo el dado
+	public string puntosC; //variable almacena los puntos acumulados por el usuario por responder correctamente 
 
-	public int contador = 0;
 
 
 	// Start is called before the first frame update
+
 	void Start()
 	{
 		numeroDado();
-		 contador = 0;
+		
 
 }
 
@@ -31,45 +29,46 @@ public class Dado : MonoBehaviour
 	{
 		
 
-
+		//print para validar la cara del dado
 		print(numeroActual);
 		
 
 		
 
 	}
+	//metodo que valida la acción a llevar según la cara que cayó
 	public int numeroDado()
 	{
-		for (int i = 0; i < caras.Length; i++)
+		for (int i = 0; i < caras.Length; i++) //for que recorre las cara para validar en cuál cayó
 		{
 
 			if (caras[i].tocaSuelo)
 			{
-				
+				//numero actual guarda el numero de la cara que cayo, se resta porque se obtiene el valor de la cara del dado que toca el suelo
 				numeroActual = 7 - caras[i].valor;
 				puntosC = caras[numeroActual - 1].puntos;
-				print("toca suelo");
+				
 
 				
   
 
 			}
 		}
-		Invoke("numeroDado", 1f);
+		Invoke("numeroDado", 1f); //metodo que actualiza cada segundo el valor de la cara del dado para validar si cambió
 		return numeroActual;
 	}
+	//método que se encarga de manera aleatoria de lanzar el dado con diferentes fuerzas
 	public void LanzarDado()
 	{
 		float fuerzaIncial = Random.Range(1, 3);
 		GetComponent<Rigidbody>().isKinematic = false;
 		GetComponent<Rigidbody>().AddForce(new Vector3(0, fuerzaIncial * 100, 0));
 		GetComponent<Rigidbody>().rotation = Random.rotation;
-		print("entra y lanzaS");
 		
 
 
 	}
-
+	//metodo que valida si la cara y el gesto con la mano derecha de la persona es uno
 	 public void esUno()
 
 	{
@@ -79,10 +78,11 @@ public class Dado : MonoBehaviour
 					
 
 			texto.text = " excelente, cara del dado es uno";
-			print("entra");
+			
 		}
 
 	}
+	//metodo que valida si la cara y el gesto con la mano derecha de la persona es dos
 
 	public void esDos()
 
@@ -92,12 +92,13 @@ public class Dado : MonoBehaviour
 		if (numeroActual == 2)
 		{
 			texto.text = "excelente, cara del dado es dos";	
-			print("entra");
+			
 		
 
 			
 		}
 	}
+	//metodo que valida si la cara y el gesto con la mano derecha de la persona es tres
 
 	public void esTres()
 
@@ -110,6 +111,8 @@ public class Dado : MonoBehaviour
 
 		}
 	}
+		//metodo que valida si la cara y el gesto con la mano derecha de la persona es cuatro
+
 
 	public void esCuatro()
 
@@ -122,6 +125,8 @@ public class Dado : MonoBehaviour
 
 		}
 	}
+		//metodo que valida si la cara y el gesto con la mano derecha de la persona es cinco
+
 	public void esCinco()
 
 	{
@@ -136,6 +141,7 @@ public class Dado : MonoBehaviour
 		}
 
 	}
+	//metodo que valida si la cara y el gesto con la mano derecha de la persona es cero
 
 	public void esCero()
 
@@ -149,7 +155,7 @@ public class Dado : MonoBehaviour
 			texto.text = " excelente, cara del dado es cero";
 		
 		}
-		print(val+ "validacion");
+		
 	}
 
 

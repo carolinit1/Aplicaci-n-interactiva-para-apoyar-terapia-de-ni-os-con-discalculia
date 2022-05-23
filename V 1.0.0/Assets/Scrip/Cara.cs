@@ -24,6 +24,7 @@ public class Cara : MonoBehaviour
 
 		
     }
+	//méodo que se encarga de validar que el dado ya toco el suelo para saber en qué cara cayó 
     void OnTriggerEnter(Collider col)
     {
 			if(col.gameObject.tag=="suelo")
@@ -34,6 +35,7 @@ public class Cara : MonoBehaviour
 			}
 		
 	}
+		//méodo que se encarga de validar que el dado no toca el suelo aún 
 	 void OnTriggerExit(Collider col)
     {
 			
