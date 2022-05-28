@@ -17,10 +17,14 @@ public class MainPanel : MonoBehaviour
 	public float lastVolumen;
 
 	[Header("Panels")]
+	public GameObject registroTerapeutaPanel;
+	public GameObject registroAcudientePanel;
+	public GameObject registroUsuarioPanel;
+	public GameObject loginPanel;
 	public GameObject homePanel;
 	public GameObject mainPanel;
 	public GameObject optionsPanel;
-	public GameObject moduloSelectPanel;
+	public GameObject modulosPanel;
 
 	private void Awake() {
 
@@ -49,10 +53,14 @@ public class MainPanel : MonoBehaviour
 
 	public void OpenPanel(GameObject panel) {
 
+		registroTerapeutaPanel.SetActive(false);
+		registroAcudientePanel.SetActive(false);
+		registroUsuarioPanel.SetActive(false);
+		loginPanel.SetActive(false);
 		homePanel.SetActive(false);
 		mainPanel.SetActive(false);
 		optionsPanel.SetActive(false);
-		moduloSelectPanel.SetActive(false);
+		modulosPanel.SetActive(false);
 
 		panel.SetActive(true);
 		PlaySoundButton();

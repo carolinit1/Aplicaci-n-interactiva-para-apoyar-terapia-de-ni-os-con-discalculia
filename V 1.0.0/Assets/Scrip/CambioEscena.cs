@@ -26,8 +26,14 @@ public class CambioEscena : MonoBehaviour {
 	[SerializeField] private InputField confPassInput = null;
 
 	[Header("Panels")]
-	public GameObject registroPanel;
+	public GameObject registroTerapeutaPanel;
+	public GameObject registroAcudientePanel;
+	public GameObject registroUsuarioPanel;
 	public GameObject loginPanel;
+	public GameObject homePanel;
+	public GameObject mainPanel;
+	public GameObject optionsPanel;
+	public GameObject modulosPanel;
 
 	private NetworkManager networkManager = null;
 
@@ -50,10 +56,11 @@ public class CambioEscena : MonoBehaviour {
 		{
 			mensaje1.text = response.message;
 
-			if(mensaje1.text == "Bienvenidos"){
-
-				loginPanel.SetActive(false);
-				registroPanel.SetActive(true);
+			string prueba = ""+mensaje1.text;
+				
+			if(prueba == "Bienvenido"){
+				
+				OpenPanel(mainPanel);			
 			}
 		});	
 	}
@@ -86,4 +93,18 @@ public class CambioEscena : MonoBehaviour {
 
         SceneManager.LoadScene(sceneName);
     }
+
+	public void OpenPanel(GameObject panel) {
+
+		registroTerapeutaPanel.SetActive(false);
+		registroAcudientePanel.SetActive(false);
+		registroUsuarioPanel.SetActive(false);
+		loginPanel.SetActive(false);
+		homePanel.SetActive(false);
+		mainPanel.SetActive(false);
+		optionsPanel.SetActive(false);
+		modulosPanel.SetActive(false);
+
+		panel.SetActive(true);
+	}
 }
