@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45060253, g: 0.49858606, b: 0.56432104, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -511,7 +511,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -888,7 +887,6 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -941,7 +939,7 @@ Transform:
   m_LocalScale: {x: 0.41836, y: 0.41836, z: 0.41836}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &509559801
 GameObject:
@@ -975,7 +973,7 @@ Transform:
   - {fileID: 2094163329}
   - {fileID: 1105095681}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &547691164
 GameObject:
@@ -1047,7 +1045,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1078,7 +1075,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &585032646
+--- !u!1 &655645511
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1086,8 +1083,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 585032648}
-  - component: {fileID: 585032647}
+  - component: {fileID: 655645513}
+  - component: {fileID: 655645512}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1095,13 +1092,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &585032647
+--- !u!108 &655645512
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585032646}
+  m_GameObject: {fileID: 655645511}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
@@ -1157,20 +1154,20 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &585032648
+--- !u!4 &655645513
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585032646}
-  m_LocalRotation: {x: -0.32408413, y: -0.093279004, z: 0.8769916, w: -0.342278}
-  m_LocalPosition: {x: 22.02, y: 17.88, z: 6.7}
+  m_GameObject: {fileID: 655645511}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: -0.6556416, y: 5.6389832, z: -2.5433521}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 157.327, y: -573.151, z: -324.19}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &672904803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1221454274505522, guid: 33edf201cbc6fe645ad9078697cd2aea, type: 3}
@@ -1286,7 +1283,7 @@ RectTransform:
   - {fileID: 712533400}
   - {fileID: 1300465662}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 82.028, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1417,7 +1414,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1766,7 +1762,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 724eabf7b4deee34595631c6f47545f5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2057,7 +2053,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1053459984
 GameObject:
@@ -2148,7 +2144,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2289,7 +2284,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2416,11 +2410,11 @@ PrefabInstance:
       objectReference: {fileID: 1004839137}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -2429,7 +2423,7 @@ PrefabInstance:
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1942334803}
+      objectReference: {fileID: 1947309760}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2444,7 +2438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: pressboton3
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -2452,11 +2446,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
+      value: ChangeSceneWithButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: ChangeSceneWithButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
+      propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Reg-M1-N3
       objectReference: {fileID: 0}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -2813,7 +2811,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2896,99 +2893,6 @@ MonoBehaviour:
   - {fileID: 696907780}
   valido: 0
   texto2: {fileID: 0}
---- !u!1 &1383765511
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1383765513}
-  - component: {fileID: 1383765512}
-  m_Layer: 0
-  m_Name: Directional Light (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &1383765512
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383765511}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &1383765513
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383765511}
-  m_LocalRotation: {x: 0.8243728, y: -0.317752, z: 0.45074818, w: 0.12755094}
-  m_LocalPosition: {x: 16.5, y: -17.2, z: -30.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 150.215, y: -409.72, z: -331.891}
 --- !u!1 &1391544853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,7 +2951,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3167,7 +3070,7 @@ Transform:
   - {fileID: 2103118292}
   - {fileID: 481294815}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!114 &1532369879 stripped
 MonoBehaviour:
@@ -3243,7 +3146,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3310,7 +3212,6 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3348,7 +3249,7 @@ SpriteRenderer:
   m_Size: {x: 20.48, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1621930294
@@ -3363,7 +3264,7 @@ Transform:
   m_LocalScale: {x: 0.093253046, y: 0.093253046, z: 0.093253046}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: -180, z: 90}
 --- !u!1 &1815176294
 GameObject:
@@ -3394,7 +3295,7 @@ Transform:
   m_Children:
   - {fileID: 1611413315}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1942334802
 GameObject:
@@ -3517,7 +3418,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3634,7 +3534,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2094163320
 GameObject:
@@ -3769,7 +3669,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3871,7 +3770,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3980,7 +3878,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

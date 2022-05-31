@@ -3,20 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class CambioEscena : MonoBehaviour {
 
-	[Header("Mensaje Registro")]
-	[SerializeField] private Text mensaje = null;
+	[Header("Mensaje Registro Terapeuta")]
+	[SerializeField] private Text mensajeTerapeuta = null;
+
+	[Header("Mensaje Registro Acudiente")]
+	[SerializeField] private Text mensajeAcudiente = null;
+
+	[Header("Mensaje Registro Jugador")]
+	[SerializeField] private Text mensajeJugador = null;
 
 	[Header("Mensaje Login")]
-	[SerializeField] private Text mensaje1 = null;
+	[SerializeField] private Text mensajeLogin = null;
 
 	[Header("Login")]
 	[SerializeField] private InputField loginUserEmailInput = null;
 	[SerializeField] private InputField loginPasswordInput = null;
 	
-	[Header("Registro")]
+	[Header("Registro Terapeuta")]
 	[SerializeField] private InputField cedulaInput = null;
 	[SerializeField] private InputField nombreInput = null;
 	[SerializeField] private InputField apellidoInput = null;
@@ -24,6 +31,25 @@ public class CambioEscena : MonoBehaviour {
 	[SerializeField] private InputField emailInput = null;
 	[SerializeField] private InputField passInput = null;
 	[SerializeField] private InputField confPassInput = null;
+
+	[Header("Registro Acudiente")]
+	[SerializeField] private InputField cedulaAcudienteInput = null;
+	[SerializeField] private InputField nombreAcudienteInput = null;
+	[SerializeField] private InputField apellidoAcudienteInput = null;
+	[SerializeField] private InputField parentescoAcudienteInput = null;
+	[SerializeField] private InputField celularAcudienteInput = null;
+	[SerializeField] private InputField correoAcudienteInput = null;
+	[SerializeField] private InputField direccionAcudienteInput = null;
+
+	[Header("Registro Jugador")]
+	[SerializeField] private InputField idJugadorInput = null;
+	[SerializeField] private InputField nombreJugadorInput = null;
+	[SerializeField] private InputField apellidoJugadorInput = null;
+	[SerializeField] private InputField edadJugadorInput = null;
+	[SerializeField] private InputField n_sesiones_asignadasJugadorInput = null;
+	[SerializeField] private InputField cedula_terapeutaInput = null;
+	[SerializeField] private InputField cedula_acudienteInput = null;
+	[SerializeField] private InputField diagnosticoJugadorInput = null;
 
 	[Header("Panels")]
 	public GameObject registroTerapeutaPanel;
@@ -46,17 +72,17 @@ public class CambioEscena : MonoBehaviour {
 
 		if(loginUserEmailInput.text == "" || loginPasswordInput.text == "") {
 
-			mensaje1.text = "Por favor llenar todos los campos";
+			mensajeLogin.text = "Por favor llenar todos los campos";
 			return;
 		}
 
-		mensaje.text = "Procesando...";
+		mensajeLogin.text = "Procesando...";
 
 		networkManager.CheckUser(loginUserEmailInput.text, loginPasswordInput.text, delegate(Response response) 
 		{
-			mensaje1.text = response.message;
+			mensajeLogin.text = response.message;
 
-			string prueba = ""+mensaje1.text;
+			string prueba = ""+mensajeLogin.text;
 				
 			if(prueba == "Bienvenido"){
 				
@@ -69,23 +95,55 @@ public class CambioEscena : MonoBehaviour {
 		
 		if(cedulaInput.text == "" || nombreInput.text == "" || apellidoInput.text == "" || especialidadInput.text == "" || emailInput.text == "" || passInput.text == "" || confPassInput.text == "") {
 
-			mensaje.text = "Por favor llenar todos los campos";
+			mensajeTerapeuta.text = "Por favor llenar todos los campos";
 			return;
 		}
 
 		if(passInput.text == confPassInput.text) {
 
-			mensaje.text = "Procesando...";
+			mensajeTerapeuta.text = "Procesando...";
 
 			networkManager.CreateUser(cedulaInput.text, nombreInput.text, apellidoInput.text, especialidadInput.text, emailInput.text, passInput.text, delegate(Response response) 
 			{
-				mensaje.text = response.message;
+				mensajeTerapeuta.text = response.message;
 			});
 		}
 		else {
 
-			mensaje.text = "Las contraseñas son diferentes, por favor verificar";
+			mensajeTerapeuta.text = "Las contraseñas son diferentes, por favor verificar";
 		}
+	}
+
+	public void SubmitRegistroJugador() {
+		
+		if(idJugadorInput.text == "" || nombreJugadorInput.text == "" || apellidoJugadorInput.text == "" || edadJugadorInput.text == "" || n_sesiones_asignadasJugadorInput.text == "" || cedula_terapeutaInput.text == "" || cedula_acudienteInput.text == "" || diagnosticoJugadorInput.text == "") {
+
+			mensajeJugador.text = "Por favor llenar todos los campos";
+			return;
+		}
+
+		mensajeJugador.text = "Procesando...";
+
+		networkManager.CreateJugador(Int32.Parse(idJugadorInput.text), nombreJugadorInput.text, apellidoJugadorInput.text, Int32.Parse(edadJugadorInput.text), Int32.Parse(n_sesiones_asignadasJugadorInput.text), Int32.Parse(cedula_terapeutaInput.text), Int32.Parse(cedula_acudienteInput.text), diagnosticoJugadorInput.text, delegate(Response response) 
+		{
+			mensajeJugador.text = response.message;
+		});
+	}
+
+	public void SubmitRegistroAcudiente() {
+		
+		if(cedulaAcudienteInput.text == "" || nombreAcudienteInput.text == "" || apellidoAcudienteInput.text == "" || parentescoAcudienteInput.text == "" || celularAcudienteInput.text == "" || correoAcudienteInput.text == "" || direccionAcudienteInput.text == "") {
+
+			mensajeAcudiente.text = "Por favor llenar todos los campos";
+			return;
+		}
+
+		mensajeAcudiente.text = "Procesando...";
+
+		networkManager.CreateAcudiente(Int32.Parse(cedulaAcudienteInput.text), nombreAcudienteInput.text, apellidoAcudienteInput.text, parentescoAcudienteInput.text, Int32.Parse(celularAcudienteInput.text), correoAcudienteInput.text, direccionAcudienteInput.text, delegate(Response response) 
+		{
+			mensajeAcudiente.text = response.message;
+		});
 	}
 
 	

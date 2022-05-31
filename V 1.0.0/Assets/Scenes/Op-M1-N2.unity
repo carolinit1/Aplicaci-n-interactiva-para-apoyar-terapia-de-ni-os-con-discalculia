@@ -202,99 +202,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23946753}
   m_CullTransparentMesh: 1
---- !u!1 &31610369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 31610371}
-  - component: {fileID: 31610370}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &31610370
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31610369}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &31610371
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31610369}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0.14753224, y: 0.3955471, z: 0.17648436}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!43 &110948572
 Mesh:
   m_ObjectHideFlags: 0
@@ -3111,7 +3018,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respuestaC: 1
-  valor: 5
   sonidoCorrecto: {fileID: 4364709271037844714, guid: 818be80d27ce78645b03807a109d6a07, type: 3}
   sonidoIncorrecto: {fileID: 0}
 --- !u!65 &1498889788
@@ -3483,7 +3389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respuestaC: 0
-  valor: 2
   sonidoCorrecto: {fileID: 0}
   sonidoIncorrecto: {fileID: 6870733360474358727, guid: 7fd5d52b13d6fc1439c6551fd231d8e4, type: 3}
 --- !u!65 &1638921588
@@ -3761,7 +3666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 3
+      value: Op-M1-N3
       objectReference: {fileID: 0}
     - target: {fileID: 114193398573130750, guid: df84af96020c94b4695aec5c3427db16, type: 3}
       propertyPath: _OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3791,7 +3696,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821a193af36fe364facc1be17b66b768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mensaje: {fileID: 0}
+  mensajeTerapeuta: {fileID: 0}
+  mensajeAcudiente: {fileID: 0}
+  mensajeJugador: {fileID: 0}
+  mensajeLogin: {fileID: 0}
+  loginUserEmailInput: {fileID: 0}
+  loginPasswordInput: {fileID: 0}
   cedulaInput: {fileID: 0}
   nombreInput: {fileID: 0}
   apellidoInput: {fileID: 0}
@@ -3799,6 +3709,29 @@ MonoBehaviour:
   emailInput: {fileID: 0}
   passInput: {fileID: 0}
   confPassInput: {fileID: 0}
+  cedulaAcudienteInput: {fileID: 0}
+  nombreAcudienteInput: {fileID: 0}
+  apellidoAcudienteInput: {fileID: 0}
+  parentescoAcudienteInput: {fileID: 0}
+  celularAcudienteInput: {fileID: 0}
+  correoAcudienteInput: {fileID: 0}
+  direccionAcudienteInput: {fileID: 0}
+  idJugadorInput: {fileID: 0}
+  nombreJugadorInput: {fileID: 0}
+  apellidoJugadorInput: {fileID: 0}
+  edadJugadorInput: {fileID: 0}
+  n_sesiones_asignadasJugadorInput: {fileID: 0}
+  cedula_terapeutaInput: {fileID: 0}
+  cedula_acudienteInput: {fileID: 0}
+  diagnosticoJugadorInput: {fileID: 0}
+  registroTerapeutaPanel: {fileID: 0}
+  registroAcudientePanel: {fileID: 0}
+  registroUsuarioPanel: {fileID: 0}
+  loginPanel: {fileID: 0}
+  homePanel: {fileID: 0}
+  mainPanel: {fileID: 0}
+  optionsPanel: {fileID: 0}
+  modulosPanel: {fileID: 0}
 --- !u!1001 &1662296094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4077,7 +4010,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respuestaC: 0
-  valor: 7
   sonidoCorrecto: {fileID: 0}
   sonidoIncorrecto: {fileID: 6870733360474358727, guid: 7fd5d52b13d6fc1439c6551fd231d8e4, type: 3}
 --- !u!65 &1751053756
@@ -5790,6 +5722,99 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067679605}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2082679887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2082679889}
+  - component: {fileID: 2082679888}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &2082679888
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082679887}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &2082679889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082679887}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: -0.6556416, y: 5.6389832, z: -2.5433521}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &2088555264
 GameObject:
   m_ObjectHideFlags: 0
@@ -5821,7 +5846,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 578ba5250e0cef94fad9b92cbcdf58fb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.02
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

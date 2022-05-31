@@ -18,13 +18,17 @@ public class MainPanel : MonoBehaviour
 
 	[Header("Panels")]
 	public GameObject registroTerapeutaPanel;
+	public GameObject loginPanel;
 	public GameObject registroAcudientePanel;
 	public GameObject registroUsuarioPanel;
-	public GameObject loginPanel;
 	public GameObject homePanel;
 	public GameObject mainPanel;
-	public GameObject optionsPanel;
+	public GameObject ajustesPanel;
 	public GameObject modulosPanel;
+	public GameObject detalleModulo1Panel;
+	public GameObject detalleModulo2Panel;
+	public GameObject detalleModulo3Panel;
+	public GameObject opcionesPanel;
 
 	private void Awake() {
 
@@ -54,13 +58,17 @@ public class MainPanel : MonoBehaviour
 	public void OpenPanel(GameObject panel) {
 
 		registroTerapeutaPanel.SetActive(false);
+		loginPanel.SetActive(false);
 		registroAcudientePanel.SetActive(false);
 		registroUsuarioPanel.SetActive(false);
-		loginPanel.SetActive(false);
 		homePanel.SetActive(false);
 		mainPanel.SetActive(false);
-		optionsPanel.SetActive(false);
+		ajustesPanel.SetActive(false);
 		modulosPanel.SetActive(false);
+		detalleModulo1Panel.SetActive(false);
+		detalleModulo2Panel.SetActive(false);
+		detalleModulo3Panel.SetActive(false);
+		opcionesPanel.SetActive(false);
 
 		panel.SetActive(true);
 		PlaySoundButton();
